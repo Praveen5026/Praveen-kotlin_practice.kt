@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kotlin Practice – Working Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            padding: 40px;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 500px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #3f51b5;
+        }
+        ul {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h2>Kotlin Practice Output</h2>
+    <p id="intro"></p>
+    <ul id="skills"></ul>
+</div>
+
+<script>
+    // Variables
+    const name = "Praveen";
+    const age = 21;
+
+    // String template (JS version)
+    document.getElementById("intro").innerText =
+        `My name is ${name} and I am ${age} years old.`;
+
+    // List
+    const skills = ["Kotlin", "Java", "Web Development"];
+
+    // Function
+    function displaySkills(skillList) {
+        const ul = document.getElementById("skills");
+        skillList.forEach(skill => {
+            const li = document.createElement("li");
+            li.innerText = skill;
+            ul.appendChild(li);
+        });
+    }
+
+    displaySkills(skills);
+</script>
+
+</body>
+</html>
